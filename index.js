@@ -3,15 +3,14 @@ const MongoClient = require('mongodb').MongoClient;
 const app = express()
 const ObjectId = require('mongodb').ObjectId;
 const cors = require('cors');
-const bodyParser = require('body-Parser');
 require('dotenv').config()
 
 
 const port = process.env.PORT || 5055;
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 
 
